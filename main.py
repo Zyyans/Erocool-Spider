@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-
+from functions import get_soup
 from requests import get
 
 
-url = BeautifulSoup(get("https://tellmeurl.com/erocool/").text, "lxml").strong.text.strip()
+url = get_soup("https://tellmeurl.com/erocool/").strong.text.strip()
